@@ -11,14 +11,10 @@ const { Content, Sider } = Layout;
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [selectedProductId, setSelectedProductId] = useState(1);
-  // const [productData, setProductData] = useState([]);
   const [productsData, setProductsData] = useState([]);
-  console.log("App");
 
   const data = useMemo(
     () => ({
-      // productData,
-      //  setProductData,
       productsData,
       setProductsData,
       selectedProductId,
@@ -42,7 +38,6 @@ const App = () => {
   }, [productsData]);
 
   const changeProduct = (id) => {
-    console.log(id);
     setSelectedProductId(id);
   };
 

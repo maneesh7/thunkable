@@ -1,9 +1,20 @@
 {
     "header_assigment_name": "UI assignment_Thunkable",
     "header_share_button": "Share",
+    "header_version_menu_show_version_history": "Show version history",
+    "header_version_menu_publish_styles_and_components": "Publish styles and components",
+    "header_version_menu_exports": "Exports...",
+    "header_version_menu_duplicate_to_your_drafts": "Duplicate to your drafts",
+    "header_version_menu_rename": "Rename",
+    "header_version_menu_delete": "Delete",
+    "header_version_menu_move": "Move to project...",
     "header_a_mark": "A?",
     "sidebar_layers_label": "Layers",
     "sidebar_assets_label": "Assets",
     "sidebar_page_label": "Page",
-    "sidebar_pages_label": "Pages"
+    "sidebar_pages_label": "Pages",
+    "product_context_menu_copy": "Copy link to project",
+    "product_context_menu_delete": "Delete project",
+    "product_context_menu_rename": "Rename project",
+    "product_context_menu_duplicate": "Duplicate project"
 }

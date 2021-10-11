@@ -1,52 +1,49 @@
 const { products, projectTemplate } = require("../model/projectData");
 const { StatusCodes } = require("http-status-codes");
 const getAllProducts = async (req, res) => {
-  res.status(StatusCodes.OK).send(updateProducts);
+  res.status(StatusCodes.OK).send(allProducts);
 };
 
-let updateProducts = products;
+let allProducts = products;
 
 const addProduct = async (req, res) => {
-  let nextNumber = updateProducts.length + 1;
+  let nextNumber = allProducts.length + 1;
   const maxNum = Math.max(
-    ...updateProducts.map((data) => data.name.split("Page ")[1])
+    ...allProducts.map((data) => data.name.split("Page ")[1])
   );
-  const newNumber = nextNumber > maxNum ? nextNumber : maxNum + 1;
+
+  const newNumber =
+    nextNumber > maxNum || isNaN(maxNum) ? nextNumber : maxNum + 1;
   const pageObj = {
     name: `Page ` + newNumber,
     id: newNumber.toString(),
     payload: [projectTemplate]
   };
-  updateProducts = [...updateProducts, pageObj];
+  allProducts = [...allProducts, pageObj];
   res.status(StatusCodes.OK).send(pageObj);
 };
 
 const getProduct = (req, res) => {
   const { id } = req.params;
-  const product = updateProducts.find(
-    (product) => product.id === id.toString()
-  );
+  const product = allProducts.find((product) => product.id === id.toString());
   res.status(StatusCodes.OK).send(product);
 };
 
 const renameProductName = (req, res) => {
   const { value, index } = req.params;
-  updateProducts.map((data) => {
+  allProducts.map((data) => {
     if (data.id === index) {
       data.name = value;
     }
     return data;
   });
-  res.status(StatusCodes.OK).send(updateProducts);
+  res.status(StatusCodes.OK).send(allProducts);
 };
 
 const deleteProduct = (req, res) => {
   const { id } = req.params;
-  updateProducts = updateProducts.filter(
-    (product) => product.id !== id.toString()
-  );
-  console.log("deleteProduct");
-  res.status(StatusCodes.OK).send(updateProducts);
+  allProducts = allProducts.filter((product) => product.id !== id.toString());
+  res.status(StatusCodes.OK).send(allProducts);
 };
 
 module.exports = {

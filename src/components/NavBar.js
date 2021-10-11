@@ -13,35 +13,44 @@ import { useTranslation } from "react-i18next";
 import companyLogo from "../assets/ThunkableBeaver.png";
 const { Header } = Layout;
 
-const versionMenu = (
-  <Menu className="customMenu">
-    <Menu.Item className="menuItem">Show version history</Menu.Item>
-    <div className="divider"></div>
-    <Menu.Item className="menuItem">Publish styles and components</Menu.Item>
-    <Menu.Item className="menuItem">Exports...</Menu.Item>
-    <div className="divider"></div>
-    <Menu.Item className="menuItem">Duplicate to your drafts</Menu.Item>
-    <Menu.Item className="menuItem">Rename</Menu.Item>
-    <Menu.Item className="menuItem" disabled={true}>
-      Delete
-    </Menu.Item>
-    <div className="divider"></div>
-    <Menu.Item className="menuItem" disabled={true}>
-      Move to project...
-    </Menu.Item>
-  </Menu>
-);
-
-const menu = (
-  <Menu className="customMenu">
-    <Menu.Item className="menuItem">1st menu item</Menu.Item>
-    <Menu.Item className="menuItem">2nd menu item</Menu.Item>
-    <Menu.Item className="menuItem">3rd menu item</Menu.Item>
-  </Menu>
-);
-
 const NavBar = () => {
   const { t } = useTranslation();
+  const versionMenu = (
+    <Menu className="customMenu">
+      <Menu.Item className="menuItem">
+        {t("header_version_menu_show_version_history")}
+      </Menu.Item>
+      <div className="divider"></div>
+      <Menu.Item className="menuItem">
+        {t("header_version_menu_publish_styles_and_components")}
+      </Menu.Item>
+      <Menu.Item className="menuItem">
+        {t("header_version_menu_exports")}
+      </Menu.Item>
+      <div className="divider"></div>
+      <Menu.Item className="menuItem">
+        {t("header_version_menu_duplicate_to_your_drafts")}
+      </Menu.Item>
+      <Menu.Item className="menuItem">
+        {t("header_version_menu_delete")}
+      </Menu.Item>
+      <Menu.Item className="menuItem" disabled={true}>
+        {t("header_version_menu_move")}
+      </Menu.Item>
+      <div className="divider"></div>
+      <Menu.Item className="menuItem" disabled={true}>
+        Move to project...
+      </Menu.Item>
+    </Menu>
+  );
+
+  const menu = (
+    <Menu className="customMenu">
+      <Menu.Item className="menuItem">1st menu item</Menu.Item>
+      <Menu.Item className="menuItem">2nd menu item</Menu.Item>
+      <Menu.Item className="menuItem">3rd menu item</Menu.Item>
+    </Menu>
+  );
   return (
     <Header className="header">
       <Row justify="space-between">

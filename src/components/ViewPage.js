@@ -7,8 +7,8 @@ import "./ViewPage.scss";
 import { EditOutlined, PlayCircleOutlined } from "@ant-design/icons";
 import services from "../controller/products";
 import deleteIcon from "../assets/DeleteIcon_Hover.svg";
-const dateFormat = "YYYY/MM/DD";
 
+const dateFormat = "YYYY/MM/DD";
 const ViewPage = (selectedProduct) => {
   const { selectedProductId } = useContext(ProductContext);
   const [isLoading, setIsLoading] = useState(true);
@@ -30,6 +30,7 @@ const ViewPage = (selectedProduct) => {
   const handleOnDragEnd = (result) => {
     // TBD :: save new row order
   };
+
   return (
     <>
       <DragDropContext onDragEnd={handleOnDragEnd}>

@@ -12,7 +12,7 @@ const {
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.send('<h1> Home Page</h1><a href="/api/products">products</a>');
+  res.send('<h1> Home Page</h1><a href="/api/v1/products">products</a>');
 });
 
 router.route("/").get(getAllProducts);

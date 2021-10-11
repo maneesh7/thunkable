@@ -32,7 +32,6 @@ const SideBarNavBar = ({ changeProduct }) => {
 
   const displayProduct = (id) => {
     changeProduct(id);
-    console.log("displayProduct", id);
   };
 
   return (
