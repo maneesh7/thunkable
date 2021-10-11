@@ -1,0 +1,175 @@
+@import "~antd/dist/antd.css";
+
+:root {
+  --arrow-color: var(--global-black-color);
+}
+
+.header {
+  background-color: var(--global-header-bg-color);
+  height: 48px;
+  padding: 0px;
+  .ant-menu-dark {
+    background-color: var(--global-header-bg-color);
+    height: 48px;
+  }
+
+  button {
+    border-radius: 0px;
+    border: 0px;
+    color: var(--global-white-color);
+    &:hover {
+      background-color: var(--global-primary-color);
+    }
+  }
+  .ant-btn-lg {
+    height: 48px;
+    width: 56px;
+  }
+
+  .logo {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+  }
+}
+
+.ant-menu-dark.ant-menu-horizontal > .ant-menu-item {
+  padding: 0px;
+  margin: 0px;
+  line-height: 48px;
+  height: 48px;
+  width: 56px;
+}
+
+.leftNav {
+  display: flex;
+  button {
+    border-radius: 0px;
+  }
+}
+
+.versionMenu {
+  display: flex;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 48px;
+  align-items: center;
+  label {
+    color: var(--global-white-color);
+  }
+
+  button {
+    font-size: 10px;
+    margin-top: 2px;
+    &:hover {
+      background-color: transparent;
+      .anticon {
+        color: yellow;
+        margin-top: 4px;
+      }
+    }
+  }
+}
+
+.rightbar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-end;
+  & > * {
+    margin: 0px 5px;
+  }
+  .ant-badge-count {
+    height: 24px;
+    width: 24px;
+    border-radius: 100%;
+    padding-top: 3px;
+    margin-top: 12px;
+    background-color: #52c41a;
+  }
+  .ant-btn-primary {
+    margin-top: 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: bold;
+    font-family: sans-serif;
+  }
+  .ant-btn-text {
+    height: 48px;
+    width: 32px;
+    padding: 0;
+    &:hover {
+      background-color: var(--global-black-color);
+      color: var(--global-white-color);
+    }
+  }
+  .ant-menu {
+    width: 60px;
+    font-size: 8px;
+  }
+  .zoomDropDown {
+    font-size: 11px;
+    color: #ada9a9;
+  }
+  .zoomMenu {
+    padding-left: 5px;
+    &:hover {
+      background-color: black;
+    }
+  }
+
+  button {
+    height: 32px;
+  }
+}
+
+.customMenu {
+  background-color: var(--global-black-color);
+  color: var(--global-white-color);
+  .ant-dropdown-menu-item-disabled {
+    color: #979191;
+    font-weight: bold;
+    &:hover {
+      color: #979191;
+      background-color: var(--global-black-color);
+    }
+  }
+  .divider {
+    border-bottom: 1px solid var(--global-purple-taupe-color);
+    margin: 5px 0;
+  }
+}
+
+.ant-dropdown-arrow {
+  border-top-color: var(--arrow-color) !important;
+  border-left-color: var(--arrow-color) !important;
+}
+
+.menuItem {
+  height: 24px;
+  width: 250px;
+  padding: 3px 20px;
+  color: #f1f1f1;
+  font-size: 11px;
+  font-weight: 600;
+  vertical-align: middle;
+  background-color: var(--global-black-color);
+  margin-top: 5px;
+  display: flex;
+  &:hover {
+    background-color: var(--global-primary-color);
+    color: var(--global-white-color);
+  }
+}
+
+.navIcon {
+  width: 30px;
+}
+
+@media screen and (max-width: 720px) {
+  .versionMenu {
+    display: none;
+  }
+}

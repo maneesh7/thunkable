@@ -1,0 +1,55 @@
+@import "~antd/dist/antd.css";
+
+.container {
+  border: 1px solid #a7a2a2;
+  margin-top: 4px;
+  padding: 16px 2px 11px 12px;
+  box-shadow: 1px 1px #c5c2c2;
+}
+
+.droppableArea {
+  border: 2px solid #b8aeae;
+  margin: 40px;
+  padding: 10px;
+  border-radius: 9px;
+  box-shadow: 3px 3px 9px 5px #b8aeae;
+}
+
+.editIcon {
+  margin-right: 10px;
+}
+
+.leftCol {
+  text-align: left;
+  padding-right: 20px;
+
+  > * {
+    margin-right: 10px;
+    line-height: 28px;
+  }
+}
+.rightCol {
+  text-align: right;
+  min-width: 240px;
+  padding-right: 20px;
+
+  > * {
+    margin-right: 10px;
+    line-height: 28px;
+  }
+
+  .deleteIcon {
+    width: 18px;
+    filter: invert(0.5);
+    &:hover {
+      filter: invert(0);
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .droppableArea {
+    margin: 10px;
+    padding: 10px;
+  }
+}

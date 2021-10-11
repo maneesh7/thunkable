@@ -1,0 +1,51 @@
+@import "~antd/dist/antd.css";
+
+:root {
+  --border-color: var(--global-platinum-color);
+}
+
+.row {
+  background-color: var(--global-white-color);
+  height: 40px;
+  align-items: center;
+}
+
+.selectionRow {
+  background-color: var(--global-white-color);
+  height: 40px;
+  border-bottom: 1px solid var(--border-color);
+  align-items: center;
+  padding-left: 18px;
+  font-size: 12px;
+  .tab {
+    font-weight: bold;
+    &:nth-child(2) {
+      color: #8a8787;
+    }
+  }
+}
+
+.productList {
+  height: 40px;
+  padding-right: 10px;
+  padding-left: 18px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.productList > * {
+  line-height: 40px;
+}
+
+.productList :last-child {
+  text-align: right;
+}
+.pageArrow {
+  text-align: right;
+  padding-right: 10px;
+  cursor: pointer;
+  .anticon {
+    font-size: 10px;
+    margin-left: 5px;
+  }
+}

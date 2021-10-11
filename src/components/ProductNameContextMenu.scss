@@ -1,0 +1,12 @@
+@import "~antd/dist/antd.css";
+
+.contextMenuItem {
+  height: 30px;
+  width: 250px;
+  padding: 3px 20px;
+  color: var(--global-white-color);
+  vertical-align: middle;
+  &:hover {
+    background-color: var(--global-primary-color);
+  }
+}

@@ -1,0 +1,12 @@
+@import "./styles/global-color.scss";
+@import "./styles/global-vars.scss";
+
+body {
+  font-family: var(--global-font-family);
+  font-size: var(--global-font-size);
+  color: var(--global-text-color);
+  margin: 0;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
